@@ -84,7 +84,7 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     let deltaKValues = [];
     let SkValues = [];
     for (let i = 0; i < kValues.length; i++) {
-        const deltaK = maxK - kValues[i];
+        const deltaK = maxK - Km;
         deltaKValues.push(deltaK);
         SkValues.push(deltaK / maxK);
     }
