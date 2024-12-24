@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nxehtësia Specifike</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="r1">Rrezja (r<sub>1</sub>, mm):</label>
+                    <input type="number" id="r1" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="r2">Rrezja (r<sub>2</sub>, mm):</label>
+                    <input type="number" id="r2" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="m">Masa (kg):</label>
+                    <input type="number" id="m" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="n">Numri i rrotullimeve (n):</label>
+                    <input type="number" id="n" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Fd">Forca e Dinamometrit (Fd, N):</label>
+                    <input type="number" id="Fd" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c">Kapaciteti specifik i nxehtësisë (c, J/kg*K):</label>
+                    <input type="number" id="c" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="t1">Temperatura fillestare (t<sub>1</sub>, K):</label>
+                    <input type="number" id="t1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="t2">Temperatura finale (t<sub>2</sub>, K):</label>
+                    <input type="number" id="t2" required>
+                </div>
+
+                <button id="calculateBtn" type="button">Kalkulo</button>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <table id="resultsTable" class="results-table">
+                <thead></thead>
+                <tbody id="resultsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
