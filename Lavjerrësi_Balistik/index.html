@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavjerrësi Balistik</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Lavjerrësi Balistik</h1>
+    </div>
+
+    <div class="main-container">
+
+        <div class="left-panel">
+
+            <div class="input-group">
+                <label>Masa e predhës m (kg)</label>
+                <input type="number" id="m" step="0.001" value="0.02">
+            </div>
+
+            <div class="input-group">
+                <label>Masa e lavjerrësit M (kg)</label>
+                <input type="number" id="M" step="0.001" value="0.2">
+            </div>
+
+            <div class="input-group">
+                <label>Gjatësia e lavjerrësit l (m)</label>
+                <input type="number" id="l" step="0.01" value="0.3">
+            </div>
+
+            <div class="input-group">
+                <label>Këndi i devijimit α (°)</label>
+                <input type="number" id="angle" step="0.1" value="25">
+            </div>
+
+            <button id="calculateBtn">Kalkulo</button>
+
+        </div>
+
+        <div class="right-panel">
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Gjatësia h</h3>
+                    <p id="heightResult">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Shpejtësia pas goditjes V</h3>
+                    <p id="vResult">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Shpejtësia e predhës v</h3>
+                    <p id="projectileResult">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Sasia e lëvizjes p</h3>
+                    <p id="momentumResult">0</p>
+                </div>
+
+            </div>
+
+            <div class="chart-container">
+                <canvas id="velocityChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

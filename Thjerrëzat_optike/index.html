@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metoda e Bessel-it</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <div class="title">
+            Metoda e Bessel-it
+        </div>
+
+        <div class="input-group">
+            <label>D (cm)</label>
+            <input type="number" id="D" value="100">
+        </div>
+
+        <div class="input-group">
+            <label>dm (cm)</label>
+            <input type="number" id="dm" value="70">
+        </div>
+
+        <div class="input-group">
+            <label>dv (cm)</label>
+            <input type="number" id="dv" value="30">
+        </div>
+
+        <button onclick="addMeasurement()">
+            Add Measurement
+        </button>
+
+    </div>
+
+
+    <div class="main">
+
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Mesatarja fokale fm</h3>
+                <p id="fm">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Δf = fmax - fmin</h3>
+                <p id="deltaf">0</p>
+            </div>
+
+            <div class="card">
+                <h3>δ (%)</h3>
+                <p id="delta">0</p>
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+
+            <div class="canvas-container">
+                <canvas id="canvas" width="900" height="500"></canvas>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>D</th>
+                            <th>dm</th>
+                            <th>dv</th>
+                            <th>d</th>
+                            <th>f</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+
+</html>

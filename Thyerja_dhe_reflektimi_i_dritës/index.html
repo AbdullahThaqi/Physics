@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligji i Thyerjes dhe Reflektimit të Dritës</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left-panel">
+
+            <div class="title">
+                Thyerja dhe Reflektimi i Dritës
+            </div>
+
+            <div class="input-group">
+                <label>Këndi i rënies α (°)</label>
+                <input type="number" id="angle" value="45">
+            </div>
+
+            <div class="input-group">
+                <label>Mjedisi n₂</label>
+                <select id="material">
+                    <option value="1.33">Ujë</option>
+                    <option value="1.49" selected>Akrilik</option>
+                    <option value="1.52">Qelq</option>
+                    <option value="2.42">Diamant</option>
+                </select>
+            </div>
+
+            <button id="calculateBtn">
+                Kalkulo
+            </button>
+
+        </div>
+
+        <div class="main">
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Këndi i reflektimit α</h3>
+                    <p id="reflectionResult">0°</p>
+                </div>
+
+                <div class="card">
+                    <h3>Këndi i thyerjes β</h3>
+                    <p id="refractionResult">0°</p>
+                </div>
+
+                <div class="card">
+                    <h3>sin(α)</h3>
+                    <p id="sinAResult">0</p>
+                </div>
+                <div class="card">
+                    <h3>sin(β)</h3>
+                    <p id="sinBResult">0</p>
+                </div>
+                <div class="card">
+                    <h3>Indeksi i thyerjes <math>
+                            <math>
+                                <mfrac>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                </mfrac>
+                            </math>
+                        </math></h3>
+                    <p id="nResult">0</p>
+                </div>
+
+            </div>
+
+            <div class="simulation">
+
+                <canvas id="opticsCanvas" width="700" height="500"></canvas>
+
+                <div class="chart-box">
+                    <canvas id="chartCanvas"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

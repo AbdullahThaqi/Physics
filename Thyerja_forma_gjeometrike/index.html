@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ligji Gjeometrik i Snellit</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left">
+            <h2>Thyerja e Dritës</h2>
+
+            <label>α (°)</label>
+            <input id="alpha" type="number" value="30">
+
+            <label>β (°)</label>
+            <input id="beta" type="number" value="20">
+
+            <label>a (mm)</label>
+            <input id="a" type="number" value="50">
+
+            <label>b (mm)</label>
+            <input id="b" type="number" value="30">
+
+            <button onclick="addMeasurement()">Shtoni matjen</button>
+
+            <div class="card">
+                n₂<sub>mes</sub> = <span id="navg">0</span>
+            </div>
+        </div>
+
+        <div class="center">
+            <canvas id="sim" width="500" height="500"></canvas>
+        </div>
+
+        <div class="right">
+
+            <h3>Të dhënat</h3>
+
+            <table id="table">
+                <tr>
+                    <th>α</th>
+                    <th>β</th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>n₂</th>
+                </tr>
+            </table>
+
+            <h3 style="margin-top:20px;">Grafiku <math> <mfrac><mi>a</mi><mi>b</mi></mfrac></math></h3>
+            <canvas id="chart"></canvas>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
